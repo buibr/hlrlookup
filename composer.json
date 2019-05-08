@@ -1,0 +1,20 @@
+{
+    "name": "burhani/hlrlookup",
+    "description": "Lookup phone number for validity in hlrlookup.com",
+    "type": "library",
+    "authors": [
+        {
+            "name": "buibr",
+            "email": "burhan@wflux.pro"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.0",
+        "buibr/csv-helper": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "buibr\\HLR\\": ""
+        }
+    }
+}
