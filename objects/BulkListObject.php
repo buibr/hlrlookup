@@ -52,4 +52,12 @@ class BulkListObject
         return $this;
     }
 
+
+    /**
+     * Return the data.
+     */
+    public function getData(){
+        return $this->_data;
+    }
+
 }

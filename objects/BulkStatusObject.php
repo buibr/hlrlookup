@@ -61,9 +61,9 @@ class BulkStatusObject
     }
 
     /**
-     * Check if bulk is created.
+     * return if the batch is processed or not..
      */
-    public function isCreated(){
-        return strtoupper($this->_raw->status) === 'OK' && !empty($this->_raw->batchid);
+    public function isFinished() {
+        return strtolower($this->_raw->status) === 'complete';
     }
 }
