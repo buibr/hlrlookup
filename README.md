@@ -1,10 +1,14 @@
-<h1>hlrlookup.com api for checking phone numbers.</h1>
+
+Lookup phone numbers from hlrlookup.com
 
 
 Install
 ----------------
 ```bash
-composer require burhani/hlrlookup
+composer require buibr/hlrlookup
+```
+```bash
+"buibr/hlrlookup": "dev-master"
 ```
 
 Usage Single Lookup
