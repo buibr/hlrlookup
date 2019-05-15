@@ -48,42 +48,42 @@ class SingleObject extends HlrBase
      *  Mobile Country Codes (MCC) and Mobile Network Codes (MNC)
      */
     public function getMccmcn(){
-        return $this->_raw->mccmnc;
+        return $this->isVerified() ? $this->_raw->mccmnc : null;
     }
 
     /**
      *  Name of the operator.
      */
     public function getNetwork(){
-        return $this->_raw->issueing_info->network_name;
+        return $this->isVerified() ? $this->_raw->issueing_info->network_name : null;
     }
 
     /**
      *  Country of origin.
      */
     public function getCountry(){
-        return $this->_raw->issueing_info->location;
+        return $this->isVerified() ? $this->_raw->issueing_info->location : null;
     }
 
     /**
      *  Country of origin.
      */
     public function getCountryCode(){
-        return $this->_raw->issueing_info->country_code;
+        return $this->isVerified() ? $this->_raw->issueing_info->country_code : null;
     }
 
     /**
      * Timezone 
      */
     public function getTimezone() : string{
-        return $this->_raw->issueing_info->timezone;
+        return $this->isVerified() ? $this->_raw->issueing_info->timezone : null;
     }
 
     /**
      * Phone type home/fax/mobile
      */
     public function getType() : string {
-        return $this->_raw->type;
+        return $this->isVerified() ? $this->_raw->type : null;
     }
 
     /**
@@ -99,7 +99,7 @@ class SingleObject extends HlrBase
      * @return mixed|string|int
      */
     public function getError() {
-        return $this->_raw->error_text;
+        return $this->isVerified() ? $this->_raw->error_text : null;
     }
 
     /**
@@ -107,7 +107,7 @@ class SingleObject extends HlrBase
      * @return string
      */
     public function getErrorCode() {
-        return $this->_raw->error_code;
+        return $this->isVerified() ? $this->_raw->error_code : null;
     }
 
     /**
@@ -115,7 +115,7 @@ class SingleObject extends HlrBase
      * @return bool
      */
     public function isRoaming() : boolean {
-        return $this->_raw->is_roaming;
+        return $this->isVerified() ? $this->_raw->is_roaming : null;
     }
 
 }
