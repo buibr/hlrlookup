@@ -103,7 +103,7 @@ class SingleObject extends HlrBase
      * @return mixed|string|int
      */
     public function getError() {
-        return isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_text;
+        return @trim(isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_text);
     }
 
     /**
@@ -111,7 +111,7 @@ class SingleObject extends HlrBase
      * @return string
      */
     public function getErrorCode() {
-        return isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_code ;
+        return @trim(isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_code);
     }
 
     /**

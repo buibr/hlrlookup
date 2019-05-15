@@ -15,7 +15,7 @@ $lookup = new Single( $config );
 $object = $lookup->check('38971789062');
 
 print_r( "\n" );
-print_r( [$lookup->isOk(), $object] );
+print_r( [$lookup->isOk(), $object->isVerified() ? 1: 0, $object, $object->getError()] );
 print_r( "\n" );
 
 die;
