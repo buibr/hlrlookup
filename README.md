@@ -30,11 +30,21 @@ $config = new HlrApi(['apikey'=>'','password'=>'']);
 $lookup = new Bulk( $config );
 
 $batch      = $lookup->submit(true, ['38971789062', '38971789062', '38971789062']);
-$status     = $lookup->status($batch);
-$download   = $lookup->download($batch);
 
-foreach($download->getData() as $record) {
-    ....
+while(true){
+
+    $status     = $lookup->status($batch);
+
+    if($status->getStatus() === 'complete'){
+        $download   = $lookup->download($batch);
+
+        foreach($download->getData() as $record) {
+            ....
+        }
+
+        break;
+    }
+
+    sleep(1);
 }
-
 ```
