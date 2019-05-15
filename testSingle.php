@@ -10,10 +10,12 @@ use buibr\HLR\Single;
 use buibr\HLR\HlrApi;
 
 $config = new HlrApi(['apikey'=>'K5bqsZAdSru65fOnMLjPDEcS0YFVcwSm','password'=>'5asUNv3g8t91']);
+
 $lookup = new Single( $config );
 $object = $lookup->check('38971789062');
 
 print_r( "\n" );
-print_r( [$lookup->isOk(), $object->getRaw()] );
+print_r( [$lookup->isOk(), $object] );
 print_r( "\n" );
+
 die;

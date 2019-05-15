@@ -41,6 +41,10 @@ class SingleObject extends HlrBase
             return false;
         }
 
+        if(isset($this->_raw->ERR)){
+            return false;
+        }
+
         return true;
     }
 
@@ -99,7 +103,7 @@ class SingleObject extends HlrBase
      * @return mixed|string|int
      */
     public function getError() {
-        return $this->isVerified() ? $this->_raw->error_text : null;
+        return isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_text;
     }
 
     /**
@@ -107,7 +111,7 @@ class SingleObject extends HlrBase
      * @return string
      */
     public function getErrorCode() {
-        return $this->isVerified() ? $this->_raw->error_code : null;
+        return isset($this->_raw->ERR) ? $this->_raw->ERR : @$this->_raw->error_code ;
     }
 
     /**
