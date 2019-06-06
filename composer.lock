@@ -4,21 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60ef73391cc02f10806b10ab7f1466cc",
+    "content-hash": "a70c52549e532fd0a191a8d8f564b1f1",
     "packages": [
         {
             "name": "buibr/csv-helper",
-            "version": "v1.4",
+            "version": "v1.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/buibr/csv-helper.git",
-                "reference": "1ee836aa208236a47968f61a8545231f03dbcad3"
+                "reference": "9f76cb5559ff7bf8840cb551a052a5ecc4777188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/buibr/csv-helper/zipball/1ee836aa208236a47968f61a8545231f03dbcad3",
-                "reference": "1ee836aa208236a47968f61a8545231f03dbcad3",
+                "url": "https://api.github.com/repos/buibr/csv-helper/zipball/9f76cb5559ff7bf8840cb551a052a5ecc4777188",
+                "reference": "9f76cb5559ff7bf8840cb551a052a5ecc4777188",
                 "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
             },
             "type": "library",
             "autoload": {
@@ -49,7 +52,7 @@
                 "todata",
                 "todb"
             ],
-            "time": "2019-05-08T12:47:05+00:00"
+            "time": "2019-05-29T10:46:13+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

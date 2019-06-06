@@ -42,7 +42,7 @@ class BulkListObject
     public function parser(){
 
         $csv = new CsvParser;
-        $csv->fromString( $this->_raw );
+        $csv->fromData( $this->_raw );
 
         foreach($csv->toArray() as $id=>$obj){
             if(empty($obj)) continue;
