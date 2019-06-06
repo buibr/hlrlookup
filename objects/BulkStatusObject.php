@@ -19,6 +19,10 @@ class BulkStatusObject
         try
         {
             $this->_raw = \json_decode( (string)$data );
+            
+            if(isset($this->_raw->ERR)) {
+                throw new \ErrorException($this->_raw->ERR);
+            }
 
             if(!isset($this->_raw->status)){
                 throw new \ErrorException("Unsuported data format.");

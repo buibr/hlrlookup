@@ -11,11 +11,12 @@ use buibr\HLR\Bulk;
 use buibr\HLR\HlrApi;
 use buibr\HLR\objects\BulkSubmitObject;
 
-$config = new HlrApi(['apikey'=>'K5bqsZAdSru65fOnMLjPDEcS0YFVcwSm','password'=>'5asUNv3g8t91']);
+$config = new HlrApi(['apikey'=>'','password'=>'']);
 $lookup = new Bulk( $config );
+
 // $batch  = $lookup->submit(true, ['38971789062', '38978283063', '38978225503', '37744325']);
 
-$batch      = new BulkSubmitObject( '{"status":"OK","batchid":21529}' );
+$batch      = new BulkSubmitObject('{"status":"OK","batchid":21529}' );
 
 while(true){
 
@@ -36,9 +37,6 @@ while(true){
     sleep(1);
 }
 
-print_r( "\n" );
-print_r( "\n" );
-print "FINISH";
-// print_r( [ $batch, $status, $download] );
-print_r( "\n" );
+
+echo "\n\n\n FINISH\n\n";
 die;
