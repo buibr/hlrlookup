@@ -9,7 +9,7 @@ require './objects/SingleObject.php';
 use buibr\HLR\Single;
 use buibr\HLR\HlrApi;
 
-$config = new HlrApi(['apikey'=>'K5bqsZAdSru65fOnMLjPDEcS0YFVcwSm','password'=>'5asUNv3g8t91']);
+$config = new HlrApi(['apikey'=>'xxx','password'=>'']);
 
 $lookup = new Single( $config );
 $object = $lookup->check('38971789062');
