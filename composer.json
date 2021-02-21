@@ -2,11 +2,12 @@
     "name": "buibr/hlrlookup",
     "description": "Lookup phone number for validity in hlrlookup.com",
     "type": "library",
-    "license": "GPL",
+    "license": "BSD-4-Clause",
     "authors": [
         {
             "name": "buibr",
-            "email": "burhan@wflux.pro"
+            "email": "burhan@wflux.pro",
+            "homepage": "https://buib.me
         }
     ],
     "require": {
