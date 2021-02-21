@@ -2,6 +2,7 @@
     "name": "buibr/hlrlookup",
     "description": "Lookup phone number for validity in hlrlookup.com",
     "type": "library",
+    "license": "GPL",
     "authors": [
         {
             "name": "buibr",
